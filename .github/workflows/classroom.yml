@@ -43,9 +43,9 @@ jobs:
       #     max-score: 30
       - name: Autograding Reporter
         uses: ./
-        env:
-          SHOUT-TEST_RESULTS: "${{test1.outputs.result}}"
-          A-COMMAND-TEST_RESULTS: "${{test2.outputs.result}}"
+        # env:
+        #   SHOUT-TEST_RESULTS: "${{test1.outputs.result}}"
+        #   A-COMMAND-TEST_RESULTS: "${{test2.outputs.result}}"
           # PYTHON-TEST_RESULTS: "${{steps.python-test.outputs.result}}"
           # PYTHON-TEST-WITH-SCORE_RESULTS: "${{steps.python-test-with-score.outputs.result}}"
         with:

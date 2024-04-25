@@ -47,4 +47,4 @@ jobs:
           PROGRAM1-PY_RESULTS: "${{steps.program1-py.outputs.result}}"
           PROGRAM2-PY_RESULTS: "${{steps.program2-py.outputs.result}}"
         with:
-          runners: program1-py,program2-py
+          runners: "program1-py, program2-py"

@@ -14,6 +14,6 @@ class Solution(object):
                 if not stack or stack.pop() != brackets[char]:
                     return False
             else:
-                return False
+                return False 
 
         return not stack

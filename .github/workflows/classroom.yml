@@ -42,11 +42,9 @@ jobs:
       #   with:
       #     max-score: 30
       - name: Autograding Reporter
-        uses: ./
-        # env:
-        #   SHOUT-TEST_RESULTS: "${{test1.outputs.result}}"
-        #   A-COMMAND-TEST_RESULTS: "${{test2.outputs.result}}"
-          # PYTHON-TEST_RESULTS: "${{steps.python-test.outputs.result}}"
-          # PYTHON-TEST-WITH-SCORE_RESULTS: "${{steps.python-test-with-score.outputs.result}}"
+        uses: education/autograding-grading-reporter@v1
+        env:
+          PROGRAM1-PY_RESULTS: "${{steps.program1-py.outputs.result}}"
+          PROGRAM2-PY_RESULTS: "${{steps.program2-py.outputs.result}}"
         with:
-          runners: test1,test2
+          runners: program1-py,program2-py

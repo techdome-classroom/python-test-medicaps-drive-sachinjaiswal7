@@ -12,25 +12,25 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: python1 Test
-        id: python2-test
-        uses: education/autograding-io-grader@v1
+      # - name: python1 Test
+      #   id: python2-test
+      #   uses: education/autograding-io-grader@v1
+      #   with:
+      #     test-name: test1.py
+      #     setup-command: sudo -H pip3 install pytest
+      #     command: "python test1.py"
+      #     # input: hello
+      #     # expected-output: HELLO
+      #     # comparison-method: exact
+      #     timeout: 10
+      #     max-score: 20
+      - name: A python1 test
+        id: a-python1-test
+        uses: education/autograding-command-grader@v1
         with:
           test-name: test1.py
           setup-command: sudo -H pip3 install pytest
-          command: "python test1.py"
-          # input: hello
-          # expected-output: HELLO
-          # comparison-method: exact
-          timeout: 10
-          max-score: 20
-      - name: A python2 test
-        id: a-python2-test
-        uses: education/autograding-command-grader@v1
-        with:
-          test-name: test2.py
-          setup-command: sudo -H pip3 install pytest
-          command: python test2.py
+          command: python test1.py
           timeout: 10
           max-score: 20
       # - name: Python test
